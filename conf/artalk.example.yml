@@ -143,6 +143,15 @@ moderator:
       - ./data/keywords_1.txt
     file_sep: "\n"
     replace_to: x
+  # AI Comment Moderation (OpenAI compatible API)
+  ai:
+    enabled: false
+    # API Key
+    api_key: ""
+    # Model name
+    model: ""
+    # API Host (default: api.openai.com)
+    host: ""
 
 # Captcha
 captcha:

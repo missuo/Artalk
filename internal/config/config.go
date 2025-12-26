@@ -124,6 +124,15 @@ type ModeratorConf struct {
 	Tencent        TencentAntispamConf  `koanf:"tencent" json:"tencent"`
 	Aliyun         AliyunAntispamConf   `koanf:"aliyun" json:"aliyun"`
 	Keywords       KeyWordsAntispamConf `koanf:"keywords" json:"keywords"`
+	AI             AIAntispamConf       `koanf:"ai" json:"ai"`
+}
+
+// AI 评论审核 (OpenAI 兼容接口)
+type AIAntispamConf struct {
+	Enabled bool   `koanf:"enabled" json:"enabled"`
+	ApiKey  string `koanf:"api_key" json:"api_key"`
+	Model   string `koanf:"model" json:"model"`
+	Host    string `koanf:"host" json:"host"` // 默认 api.openai.com
 }
 
 // 腾讯云反垃圾

@@ -145,6 +145,15 @@ moderator:
     file_sep: "\n"
     # 替換字符
     replace_to: x
+  # AI 評論審核 (OpenAI 相容介面)
+  ai:
+    enabled: false
+    # API Key
+    api_key: ""
+    # 模型名稱
+    model: ""
+    # API Host (預設 api.openai.com)
+    host: ""
 
 # 驗證碼
 captcha:

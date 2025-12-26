@@ -123,6 +123,12 @@ func (as AntiSpam) getEnabledCheckers() []Checker {
 
 	}
 
+	// AI Checker (OpenAI compatible)
+	aiConf := as.conf.AI
+	if aiConf.Enabled && strings.TrimSpace(aiConf.ApiKey) != "" && strings.TrimSpace(aiConf.Model) != "" {
+		checkers = append(checkers, NewAIChecker(aiConf.ApiKey, aiConf.Model, aiConf.Host))
+	}
+
 	return checkers
 }
 
