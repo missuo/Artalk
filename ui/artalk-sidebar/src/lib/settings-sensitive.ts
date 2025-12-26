@@ -37,6 +37,12 @@ export const SensitiveConfigPaths = [
   'db.password',
   'email.ali_dm.access_key_secret',
   'email.smtp.password',
+  'moderator.akismet_key',
+  'moderator.tencent.secret_id',
+  'moderator.tencent.secret_key',
+  'moderator.aliyun.access_key_id',
+  'moderator.aliyun.access_key_secret',
+  'moderator.ai.api_key',
 ]
 
 export function isSensitiveConfigPath(path: string) {
